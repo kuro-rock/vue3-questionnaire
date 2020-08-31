@@ -1,4 +1,4 @@
-# toushin
+# Project
 
 ## Project setup
 ```
