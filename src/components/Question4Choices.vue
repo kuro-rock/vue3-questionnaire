@@ -48,11 +48,11 @@ export default defineComponent({
           choices: [
             {
               text: "①",
-              flag: false
+              flag: true
             },
             {
               text: "②",
-              flag: true
+              flag: false
             },
             {
               text: "③",
@@ -73,11 +73,11 @@ export default defineComponent({
             },
             {
               text: "②",
-              flag: true
+              flag: false
             },
             {
               text: "③",
-              flag: false
+              flag: true
             },
             {
               text: "④",
@@ -94,7 +94,7 @@ export default defineComponent({
             },
             {
               text: "②",
-              flag: true
+              flag: false
             },
             {
               text: "③",
@@ -111,7 +111,7 @@ export default defineComponent({
           choices: [
             {
               text: "①",
-              flag: false
+              flag: true
             },
             {
               text: "②",
