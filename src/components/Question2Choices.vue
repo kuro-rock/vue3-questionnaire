@@ -51,7 +51,7 @@ export default defineComponent({
         },
         {
           number: "7",
-          message: "中小型株に投資するか",
+          message: "中小か",
           choices: [
             {
               text: "Yes",
