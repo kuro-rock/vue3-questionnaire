@@ -101,4 +101,11 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
+button {
+  padding: 0.25em 1em;
+  border: solid 1px #999;
+  border-radius: 0.125em;
+  background: #fff;
+}
+
 </style>

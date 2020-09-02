@@ -3,8 +3,10 @@
     <h2>
       Answers
     </h2>
-    <p>{{Answers[point].message}}</p>
-    <a :href="Answers[point].link">詳細はこちら</a>
+    <a :href="Answers[point].link" class="link" :class="'course'+point">
+      <div class="title">{{Answers[point].message}}</div>
+      <span class="detail">詳細はこちら</span>
+    </a>
   </div>
 </template>
 
@@ -66,6 +68,44 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  text-decoration: none;
+}
+.link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 3px solid;
+  border-radius: 0.5em;
+  color: #d11;
+}
+.detail {
+  font-weight: bold;
+}
+.detail::after {
+  content: '▶';
+  display: inline-block;
+}
+.course0 {
+  color: #4a85a2;
+  border-color: #4a85a2;
+}
+.course1 {
+  color: #6e8341;
+  border-color: #6e8341;
+}
+.course2 {
+  color: #006a8a;
+  border-color: #006a8a;
+}
+.course3 {
+  color: #9d7a3c;
+  border-color: #9d7a3c;
+}
+.course4 {
+  color: #985865;
+  border-color: #985865;
+}
+.course5 {
+  color: #9ebb4d;
+  border-color: #9ebb4d;
 }
 </style>
