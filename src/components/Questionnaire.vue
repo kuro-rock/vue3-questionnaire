@@ -1,8 +1,8 @@
 <template>
   <div>
-    {{selectedQuestion4}}
+    {{selectedQuestion4}}{{hasA}}
     <Question4Choices v-show="showQuestion4" @select-question4="selectQuestion4"/>
-    <Question2Choices v-show="!showQuestion4&&!showAnswer" :hasA="hasA" @select-question2="selectQuestion2"/>
+    <Question2Choices v-show="!showQuestion4&&!showAnswer" :hasTrue="hasTrue" @select-question2="selectQuestion2"/>
     <Answers v-show="showAnswer" :point="selectedQuestion2.point"/>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default defineComponent({
     });
 
     const showQuestion4 = computed(function() { return state.selectedQuestion4.length < 5})
-    const hasA = computed(function() { return state.selectedQuestion4.includes(true)})
+    const hasTrue = computed(function() { return state.selectedQuestion4.includes(true)})
     const showAnswer = computed(function() { return state.selectedQuestion2.isComplete})
     
     function selectQuestion4(q: any) {
@@ -51,7 +51,7 @@ export default defineComponent({
     return {
       ...toRefs(state),
       showQuestion4,
-      hasA,
+      hasTrue,
       showAnswer,
       selectQuestion4,
       selectQuestion2

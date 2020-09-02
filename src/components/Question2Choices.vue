@@ -16,7 +16,7 @@ import { defineComponent, reactive, toRefs } from 'vue';
 export default defineComponent({
   name: 'Question2Choices',
   props: {
-    hasA: Boolean,
+    hasTrue: Boolean,
   },
   setup(props, context) {
     const state = reactive({
@@ -69,7 +69,7 @@ export default defineComponent({
     const selectQuestion = (p:number) => {
       let point;
       let isComplete;
-      if (props.hasA && state.currentQuestion === 0){
+      if (!props.hasTrue && state.currentQuestion === 0){
         point = p * 2 + 2;
         state.currentQuestion += (p + 1);
         isComplete = false;
