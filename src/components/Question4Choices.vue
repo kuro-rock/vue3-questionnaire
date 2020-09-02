@@ -4,7 +4,9 @@
     <p>{{questions[currentQuestion].message}}</p>
     <ul>
       <li v-for="(choice, index) in questions[currentQuestion].choices" :key="index">
-        <button @click="selectQuestion(choice)">{{choice.text}}</button>
+        <button @click="selectQuestion(choice)" :class="{fillColor: choice.flag}">
+          {{choice.text}}
+        </button>
       </li>
     </ul>
 
@@ -145,9 +147,6 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 ul {
   list-style-type: none;
   padding: 0;
@@ -156,7 +155,14 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
+button {
+  padding: 0.25em 1em;
+  border: solid 1px #999;
+  border-radius: 0.125em;
+  background: #fff;
+}
+.fillColor {
+  background: #faa;
+  color: #fff;
 }
 </style>

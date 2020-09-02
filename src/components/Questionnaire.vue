@@ -34,9 +34,9 @@ export default defineComponent({
       }
     });
 
-    const showQuestion4 = computed(function() { return state.selectedQuestion4.length < 5})
-    const hasTrue = computed(function() { return state.selectedQuestion4.includes(true)})
-    const showAnswer = computed(function() { return state.selectedQuestion2.isComplete})
+    const showQuestion4 = computed(function() { return state.selectedQuestion4.length < 5});
+    const hasTrue = computed(function() { return state.selectedQuestion4.includes(true)});
+    const showAnswer = computed(function() { return state.selectedQuestion2.isComplete});
     
     function selectQuestion4(q: any) {
       state.selectedQuestion4.push(q);
@@ -58,21 +58,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
