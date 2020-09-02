@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{selectedQuestion4}}{{hasA}}
     <Question4Choices v-show="showQuestion4" @select-question4="selectQuestion4"/>
     <Question2Choices v-show="!showQuestion4&&!showAnswer" :hasTrue="hasTrue" @select-question2="selectQuestion2"/>
     <Answers v-show="showAnswer" :point="selectedQuestion2.point"/>

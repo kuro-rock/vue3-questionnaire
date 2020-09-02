@@ -16,9 +16,6 @@ import { defineComponent, reactive, toRefs, computed } from 'vue';
 
 export default defineComponent({
   name: 'Question4Choices',
-  props: {
-    msg: String,
-  },
   setup(props, context) {
     const state = reactive({
       questions: [
@@ -77,11 +74,11 @@ export default defineComponent({
             },
             {
               text: "③",
-              flag: true
+              flag: false
             },
             {
               text: "④",
-              flag: false
+              flag: true
             },
           ]
         },
